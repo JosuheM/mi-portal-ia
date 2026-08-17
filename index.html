@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diálogo &amp; Desarrollo — Análisis Independiente para el Futuro del Perú</title>
+<meta name="description" content="Diálogo &amp; Desarrollo es un centro de análisis independiente sobre gobernanza, transición energética y sostenibilidad ambiental en el Perú. Investigación, opinión y podcasts.">
+<meta name="theme-color" content="#0D2B45">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Diálogo &amp; Desarrollo — Análisis Independiente para el Futuro del Perú">
+<meta property="og:description" content="Investigación, opinión y podcasts sobre sostenibilidad y gobernanza en el Perú.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&amp;w=1200&amp;auto=format&amp;fit=crop">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          selva: '#1E4D2B',
+          'selva-deep': '#12301C',
+          institucional: '#0D2B45',
+          'institucional-light': '#173F63',
+          tierra: '#C85A32',
+          'tierra-deep': '#9A4322',
+          hueso: '#FAFAFA',
+          oscuro: '#1F2937',
+        },
+        fontFamily: {
+          display: ['"Playfair Display"', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-hueso text-oscuro antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[999] focus:bg-tierra-deep focus:text-hueso focus:px-4 focus:py-3 focus:rounded-sm">Saltar al contenido principal</a>
+
+<!-- ======================= HEADER ======================= -->
+<header id="site-header" class="sticky top-0 z-50 bg-institucional/95 backdrop-blur-sm border-b border-white/10 transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="#inicio" class="font-display text-2xl sm:text-3xl font-bold text-hueso tracking-tight shrink-0">
+        Diálogo <span class="text-tierra">&amp;</span> Desarrollo
+      </a>
+
+      <nav aria-label="Navegación principal" class="hidden md:flex items-center gap-8">
+        <a href="#inicio" class="text-sm font-medium tracking-wide text-hueso/85 hover:text-tierra transition-colors">Inicio</a>
+        <a href="#publicaciones" class="text-sm font-medium tracking-wide text-hueso/85 hover:text-tierra transition-colors">Publicaciones</a>
+        <a href="#podcasts" class="text-sm font-medium tracking-wide text-hueso/85 hover:text-tierra transition-colors">Podcasts</a>
+        <a href="#galeria" class="text-sm font-medium tracking-wide text-hueso/85 hover:text-tierra transition-colors">Galería</a>
+        <a href="#contacto" class="text-sm font-medium tracking-wide text-hueso/85 hover:text-tierra transition-colors">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <!-- Búsqueda -->
+        <div class="hidden sm:flex items-center">
+          <div id="search-wrap-desktop" class="search-wrap">
+            <label for="search-input-desktop" class="sr-only">Buscar publicaciones</label>
+            <input id="search-input-desktop" type="search" placeholder="Buscar publicaciones…"
+              class="search-input w-full bg-white/10 text-hueso placeholder-hueso/50 text-sm rounded-sm px-3 py-2 border border-white/20 focus:outline-none focus-visible:outline focus-visible:outline-3">
+          </div>
+          <button id="search-toggle" type="button" aria-expanded="false" aria-controls="search-wrap-desktop"
+            class="p-2 rounded-sm text-hueso/85 hover:text-tierra transition-colors" aria-label="Mostrar u ocultar búsqueda">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Botón menú móvil -->
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación"
+          class="md:hidden p-2 rounded-sm text-hueso hover:text-tierra transition-colors">
+          <svg id="icon-menu-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg id="icon-menu-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="md:hidden hidden flex-col bg-institucional border-t border-white/10">
+    <nav aria-label="Navegación móvil" class="flex flex-col px-4 sm:px-6 py-4 gap-1">
+      <a href="#inicio" class="mobile-link px-2 py-3 text-hueso/90 hover:text-tierra text-base font-medium">Inicio</a>
+      <a href="#publicaciones" class="mobile-link px-2 py-3 text-hueso/90 hover:text-tierra text-base font-medium">Publicaciones</a>
+      <a href="#podcasts" class="mobile-link px-2 py-3 text-hueso/90 hover:text-tierra text-base font-medium">Podcasts</a>
+      <a href="#galeria" class="mobile-link px-2 py-3 text-hueso/90 hover:text-tierra text-base font-medium">Galería</a>
+      <a href="#contacto" class="mobile-link px-2 py-3 text-hueso/90 hover:text-tierra text-base font-medium">Contacto</a>
+      <div class="pt-3 mt-2 border-t border-white/10">
+        <label for="search-input-mobile" class="sr-only">Buscar publicaciones</label>
+        <input id="search-input-mobile" type="search" placeholder="Buscar publicaciones…"
+          class="search-input w-full bg-white/10 text-hueso placeholder-hueso/50 text-sm rounded-sm px-3 py-3 border border-white/20 focus:outline-none focus-visible:outline focus-visible:outline-3">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ======================= HERO ======================= -->
+  <section id="inicio" class="relative min-h-[88vh] sm:min-h-[92vh] flex items-end overflow-hidden bg-institucional">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1800&auto=format&fit=crop"
+        alt="Vista panorámica de Machu Picchu entre montañas andinas cubiertas de niebla al amanecer"
+        class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-institucional via-institucional/75 to-institucional/30"></div>
+      <div class="absolute inset-0 bg-institucional/10"></div>
+    </div>
+
+    <!-- líneas topográficas decorativas -->
+    <svg class="absolute top-0 left-0 w-full h-1/2 opacity-[0.14]" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0,80 C240,140 480,20 720,70 C960,120 1200,10 1440,60" fill="none" stroke="#FAFAFA" stroke-width="1.5"/>
+      <path d="M0,140 C240,200 480,90 720,130 C960,170 1200,80 1440,120" fill="none" stroke="#FAFAFA" stroke-width="1.5"/>
+      <path d="M0,200 C240,255 480,155 720,190 C960,225 1200,145 1440,180" fill="none" stroke="#C85A32" stroke-width="1.5"/>
+    </svg>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-28 w-full hero-anim">
+      <p class="font-sans text-xs sm:text-sm tracking-[0.3em] uppercase text-tierra font-semibold mb-5">
+        Análisis independiente · Perú 2026
+      </p>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-hueso max-w-3xl leading-[1.1]">
+        Análisis Independiente para el Futuro del Perú
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-hueso/80 max-w-2xl font-light leading-relaxed">
+        Investigación, opinión y podcasts sobre sostenibilidad y gobernanza
+      </p>
+      <div class="mt-10">
+        <a href="#publicaciones" id="cta-hero"
+          class="inline-flex items-center gap-2 bg-tierra-deep hover:bg-[#7E3419] text-hueso font-semibold text-base px-8 py-4 rounded-sm transition-colors">
+          Explorar publicaciones
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PUBLICACIONES ======================= -->
+  <section id="publicaciones" class="relative bg-hueso pt-4 pb-20 sm:pb-28">
+    <svg class="block w-full h-14 sm:h-20 -mt-14 sm:-mt-20 relative z-10" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path fill="#FAFAFA" d="M0,40 C240,90 480,0 720,45 C960,90 1200,10 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+      <div class="max-w-2xl">
+        <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-tierra-deep font-semibold mb-3">Publicaciones recientes</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-oscuro">Análisis y opinión sobre la coyuntura peruana</h2>
+        <p class="mt-4 text-oscuro/70 leading-relaxed">
+          Artículos escritos por investigadores y colaboradores sobre energía, tierra, territorio y gobernanza democrática.
+        </p>
+      </div>
+
+      <div id="search-status" class="sr-only" role="status" aria-live="polite"></div>
+
+      <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+        <!-- Artículo 1 -->
+        <article class="article-card reveal group bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-oscuro/5"
+          data-search="camisea gas natural transición energética rodrigo tantaleán matriz energética">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop"
+              alt="Extenso campo de paneles solares bajo un cielo despejado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-tierra/10 text-tierra-deep text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Transición Energética</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-oscuro/50 mb-2">12 de agosto de 2026 · Rodrigo Tantaleán Vidal</p>
+            <h3 class="font-display text-xl font-semibold text-oscuro mb-2 leading-snug">
+              <a href="#" class="hover:text-tierra-deep">Camisea después del boom: los retos del gas natural en la matriz energética</a>
+            </h3>
+            <p class="text-sm text-oscuro/70 leading-relaxed line-clamp-2">
+              A diez años del pico de producción, el país discute cómo diversificar su matriz sin repetir los errores de la dependencia gasífera.
+            </p>
+          </div>
+        </article>
+
+        <!-- Artículo 2 -->
+        <article class="article-card reveal group bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-oscuro/5"
+          data-search="titulación de tierras amazonas reforma agraria maría fernanda quispe">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop"
+              alt="Cadena de montañas andinas cubierta de nubes bajas al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-selva/10 text-selva text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Reforma Agraria</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-oscuro/50 mb-2">9 de agosto de 2026 · María Fernanda Quispe Rojas</p>
+            <h3 class="font-display text-xl font-semibold text-oscuro mb-2 leading-snug">
+              <a href="#" class="hover:text-tierra-deep">Titulación de tierras en Amazonas: diez años después de la promesa</a>
+            </h3>
+            <p class="text-sm text-oscuro/70 leading-relaxed line-clamp-2">
+              Miles de familias agricultoras siguen esperando un título de propiedad formal pese a los sucesivos anuncios estatales.
+            </p>
+          </div>
+        </article>
+
+        <!-- Artículo 3 -->
+        <article class="article-card reveal group bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-oscuro/5"
+          data-search="minería ilegal madre de dios amazonía jorge luis ríos salazar deforestación">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=800&auto=format&fit=crop"
+              alt="Vista aérea de un río serpenteante atravesando la selva amazónica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-selva-deep/10 text-selva-deep text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Amazonía</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-oscuro/50 mb-2">5 de agosto de 2026 · Jorge Luis Ríos Salazar</p>
+            <h3 class="font-display text-xl font-semibold text-oscuro mb-2 leading-snug">
+              <a href="#" class="hover:text-tierra-deep">Minería ilegal en Madre de Dios: los números detrás de la devastación</a>
+            </h3>
+            <p class="text-sm text-oscuro/70 leading-relaxed line-clamp-2">
+              Un análisis de imágenes satelitales revela la velocidad con la que avanza la deforestación en la Amazonía sur del país.
+            </p>
+          </div>
+        </article>
+
+        <!-- Artículo 4 -->
+        <article class="article-card reveal group bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-oscuro/5"
+          data-search="descentralización gobiernos regionales gobernanza ana lucía meza cárdenas">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=800&auto=format&fit=crop"
+              alt="Paisaje andino iluminado por el sol naciente entre valles y montañas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-institucional/10 text-institucional text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Gobernanza</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-oscuro/50 mb-2">1 de agosto de 2026 · Ana Lucía Meza Cárdenas</p>
+            <h3 class="font-display text-xl font-semibold text-oscuro mb-2 leading-snug">
+              <a href="#" class="hover:text-tierra-deep">Descentralización en pausa: ¿qué falló en los gobiernos regionales?</a>
+            </h3>
+            <p class="text-sm text-oscuro/70 leading-relaxed line-clamp-2">
+              Dos décadas después de iniciado el proceso, la mayoría de regiones sigue dependiendo del gobierno central para decisiones básicas.
+            </p>
+          </div>
+        </article>
+
+        <!-- Artículo 5 -->
+        <article class="article-card reveal group bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-oscuro/5"
+          data-search="litio puno transición energética carmen rosa huamán ttito minería">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=800&auto=format&fit=crop"
+              alt="Picos montañosos rocosos entre nubes en la cordillera andina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-tierra/10 text-tierra-deep text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Transición Energética</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-oscuro/50 mb-2">28 de julio de 2026 · Carmen Rosa Huamán Ttito</p>
+            <h3 class="font-display text-xl font-semibold text-oscuro mb-2 leading-snug">
+              <a href="#" class="hover:text-tierra-deep">Litio en Puno: la próxima frontera extractiva y sus dilemas</a>
+            </h3>
+            <p class="text-sm text-oscuro/70 leading-relaxed line-clamp-2">
+              El altiplano puneño concentra reservas clave para la transición energética global, pero también nuevas tensiones socioambientales.
+            </p>
+          </div>
+        </article>
+
+        <!-- Artículo 6 -->
+        <article class="article-card reveal group bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-oscuro/5"
+          data-search="consulta previa achuar marañón amazonía diego alonso zegarra prado comunidades indígenas">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?q=80&w=800&auto=format&fit=crop"
+              alt="Vista aérea del dosel de un bosque tropical denso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-selva-deep/10 text-selva-deep text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Amazonía</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-oscuro/50 mb-2">24 de julio de 2026 · Diego Alonso Zegarra Prado</p>
+            <h3 class="font-display text-xl font-semibold text-oscuro mb-2 leading-snug">
+              <a href="#" class="hover:text-tierra-deep">Consulta previa a comunidades achuar: avances y retrocesos en el Marañón</a>
+            </h3>
+            <p class="text-sm text-oscuro/70 leading-relaxed line-clamp-2">
+              Un recuento de los procesos de consulta ligados a proyectos petroleros en el norte de la Amazonía peruana.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="no-results" class="hidden text-center py-16 text-oscuro/60">
+        No se encontraron publicaciones que coincidan con tu búsqueda.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= PODCAST ======================= -->
+  <section id="podcasts" class="relative bg-institucional pb-20 sm:pb-28 overflow-hidden">
+    <svg class="block w-full h-14 sm:h-20 -mt-14 sm:-mt-20 relative z-10" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path fill="#0D2B45" d="M0,40 C240,90 480,0 720,45 C960,90 1200,10 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 relative">
+      <div class="max-w-2xl">
+        <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-tierra font-semibold mb-3">Escucha</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-hueso">Podcast Diálogo &amp; Desarrollo</h2>
+        <p class="mt-4 text-hueso/70 leading-relaxed">
+          Conversaciones con especialistas sobre los temas que definen el futuro económico, social y ambiental del país.
+        </p>
+      </div>
+
+      <div class="mt-12 grid lg:grid-cols-5 gap-6 lg:gap-10 items-start">
+
+        <!-- Lista de episodios -->
+        <div class="lg:col-span-2 flex flex-col gap-3" role="list" aria-label="Lista de episodios del podcast">
+          <button type="button" class="episode-item is-active text-left w-full rounded-md border border-white/15 bg-white/5 hover:bg-white/10 transition-colors p-5"
+            data-index="0" data-title="El futuro del gas: ¿Camisea después del 2027?" data-guest="Con Rodrigo Tantaleán Vidal" data-duration="2280" aria-pressed="true">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-hueso font-display font-semibold leading-snug">El futuro del gas: ¿Camisea después del 2027?</p>
+                <p class="text-hueso/60 text-sm mt-1">Con Rodrigo Tantaleán Vidal</p>
+              </div>
+              <span class="text-hueso/50 text-xs shrink-0 mt-1">38 min</span>
+            </div>
+          </button>
+
+          <button type="button" class="episode-item text-left w-full rounded-md border border-white/15 bg-white/5 hover:bg-white/10 transition-colors p-5"
+            data-index="1" data-title="Comunidades indígenas y consulta previa" data-guest="Con Ana Lucía Meza Cárdenas" data-duration="2700" aria-pressed="false">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-hueso font-display font-semibold leading-snug">Comunidades indígenas y consulta previa</p>
+                <p class="text-hueso/60 text-sm mt-1">Con Ana Lucía Meza Cárdenas</p>
+              </div>
+              <span class="text-hueso/50 text-xs shrink-0 mt-1">45 min</span>
+            </div>
+          </button>
+
+          <button type="button" class="episode-item text-left w-full rounded-md border border-white/15 bg-white/5 hover:bg-white/10 transition-colors p-5"
+            data-index="2" data-title="Ciudades intermedias: ¿descentralización real?" data-guest="Con Jorge Luis Ríos Salazar" data-duration="1920" aria-pressed="false">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-hueso font-display font-semibold leading-snug">Ciudades intermedias: ¿descentralización real?</p>
+                <p class="text-hueso/60 text-sm mt-1">Con Jorge Luis Ríos Salazar</p>
+              </div>
+              <span class="text-hueso/50 text-xs shrink-0 mt-1">32 min</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Reproductor -->
+        <div class="lg:col-span-3 bg-white/5 border border-white/15 rounded-lg p-6 sm:p-8">
+          <p class="text-xs uppercase tracking-[0.2em] text-tierra font-semibold mb-2">Reproduciendo ahora</p>
+          <h3 id="now-playing-title" class="font-display text-xl sm:text-2xl font-semibold text-hueso leading-snug">El futuro del gas: ¿Camisea después del 2027?</h3>
+          <p id="now-playing-guest" class="text-hueso/60 text-sm mt-1">Con Rodrigo Tantaleán Vidal</p>
+
+          <div class="flex items-center gap-4 mt-8">
+            <button id="play-pause-btn" type="button" aria-pressed="false" aria-label="Reproducir episodio"
+              class="shrink-0 w-14 h-14 rounded-full bg-tierra-deep hover:bg-[#7E3419] flex items-center justify-center transition-colors">
+              <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-hueso ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+              <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-hueso hidden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+
+            <div class="flex-1">
+              <div id="progress-bar" role="progressbar" aria-label="Progreso del episodio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                class="relative h-2 rounded-full bg-white/15 cursor-pointer">
+                <div id="progress-fill" class="absolute inset-y-0 left-0 rounded-full bg-tierra" style="width:0%"></div>
+              </div>
+              <div class="flex justify-between mt-2 text-xs text-hueso/50 font-mono">
+                <span id="time-elapsed">00:00</span>
+                <span id="time-total">38:00</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="sr-only" id="player-live-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= GALERÍA ======================= -->
+  <section id="galeria" class="relative bg-hueso pb-20 sm:pb-28 overflow-hidden">
+    <svg class="block w-full h-14 sm:h-20 -mt-14 sm:-mt-20 relative z-10" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path fill="#FAFAFA" d="M0,40 C240,90 480,0 720,45 C960,90 1200,10 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+      <div class="max-w-2xl">
+        <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-tierra-deep font-semibold mb-3">Reportajes fotográficos</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-oscuro">Galería</h2>
+        <p class="mt-4 text-oscuro/70 leading-relaxed">Historias visuales desde el territorio, capturadas por nuestro equipo de campo.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+
+        <button type="button" class="gallery-item reveal group relative aspect-square overflow-hidden rounded-md"
+          data-title="Deshielo en el Ausangate" data-caption="Registro del retroceso glaciar en la cordillera del Ausangate, Cusco."
+          data-img="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1400&auto=format&fit=crop"
+          aria-label="Ampliar fotografía: Deshielo en el Ausangate">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600&h=600&auto=format&fit=crop"
+            alt="Lago de montaña rodeado de picos nevados en la cordillera andina" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-institucional/90 via-institucional/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <p class="text-hueso font-display font-semibold text-sm sm:text-base text-left">Deshielo en el Ausangate</p>
+          </div>
+        </button>
+
+        <button type="button" class="gallery-item reveal group relative aspect-square overflow-hidden rounded-md"
+          data-title="Vida en el río Madre de Dios" data-caption="Comunidades ribereñas y su relación cotidiana con el río en la Amazonía sur."
+          data-img="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1400&auto=format&fit=crop"
+          aria-label="Ampliar fotografía: Vida en el río Madre de Dios">
+          <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=600&h=600&auto=format&fit=crop"
+            alt="Río sinuoso atravesando la densa selva amazónica visto desde el aire" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-institucional/90 via-institucional/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <p class="text-hueso font-display font-semibold text-sm sm:text-base text-left">Vida en el río Madre de Dios</p>
+          </div>
+        </button>
+
+        <button type="button" class="gallery-item reveal group relative aspect-square overflow-hidden rounded-md"
+          data-title="Agricultura familiar en los Andes" data-caption="Parcelas y terrazas de cultivo sostenidas por generaciones de familias andinas."
+          data-img="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1400&auto=format&fit=crop"
+          aria-label="Ampliar fotografía: Agricultura familiar en los Andes">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600&h=600&auto=format&fit=crop"
+            alt="Valle andino con terrenos de cultivo entre montañas y nubes bajas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-institucional/90 via-institucional/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <p class="text-hueso font-display font-semibold text-sm sm:text-base text-left">Agricultura familiar en los Andes</p>
+          </div>
+        </button>
+
+        <button type="button" class="gallery-item reveal group relative aspect-square overflow-hidden rounded-md"
+          data-title="Bosques bajo presión: Ucayali" data-caption="Zonas de bosque primario amenazadas por la expansión agrícola en Ucayali."
+          data-img="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1400&auto=format&fit=crop"
+          aria-label="Ampliar fotografía: Bosques bajo presión, Ucayali">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=600&h=600&auto=format&fit=crop"
+            alt="Bosque denso envuelto en neblina matutina" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-institucional/90 via-institucional/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <p class="text-hueso font-display font-semibold text-sm sm:text-base text-left">Bosques bajo presión: Ucayali</p>
+          </div>
+        </button>
+
+        <button type="button" class="gallery-item reveal group relative aspect-square overflow-hidden rounded-md"
+          data-title="Rutas de la Amazonía: comercio fluvial" data-caption="El río como principal vía de transporte y comercio para las comunidades amazónicas."
+          data-img="https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?q=80&w=1400&auto=format&fit=crop"
+          aria-label="Ampliar fotografía: Rutas de la Amazonía, comercio fluvial">
+          <img src="https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?q=80&w=600&h=600&auto=format&fit=crop"
+            alt="Vista aérea del dosel verde de la selva amazónica" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-institucional/90 via-institucional/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <p class="text-hueso font-display font-semibold text-sm sm:text-base text-left">Rutas de la Amazonía: comercio fluvial</p>
+          </div>
+        </button>
+
+        <button type="button" class="gallery-item reveal group relative aspect-square overflow-hidden rounded-md"
+          data-title="Guardianes del territorio" data-caption="Comunidades indígenas que vigilan y protegen sus bosques frente a la tala y minería ilegal."
+          data-img="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=1400&auto=format&fit=crop"
+          aria-label="Ampliar fotografía: Guardianes del territorio">
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=600&h=600&auto=format&fit=crop"
+            alt="Picos montañosos entre nubes en la cordillera de los Andes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-institucional/90 via-institucional/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <p class="text-hueso font-display font-semibold text-sm sm:text-base text-left">Guardianes del territorio</p>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================= LIGHTBOX ======================= -->
+<div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
+  <div id="lightbox-backdrop" class="absolute inset-0 bg-institucional/95"></div>
+  <div class="relative max-w-4xl w-full">
+    <button id="lightbox-close" type="button" aria-label="Cerrar imagen ampliada"
+      class="absolute -top-12 right-0 sm:right-0 text-hueso/90 hover:text-tierra p-2 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="w-full max-h-[70vh] object-contain rounded-md bg-black/20">
+    <div class="mt-4">
+      <p id="lightbox-title" class="text-hueso font-display text-lg font-semibold"></p>
+      <p id="lightbox-caption" class="text-hueso/60 text-sm mt-1"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= FOOTER ======================= -->
+<footer id="contacto" class="relative bg-institucional text-hueso pt-8 pb-8 overflow-hidden">
+  <svg class="block w-full h-14 sm:h-20 -mt-14 sm:-mt-20 relative z-10" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path fill="#0D2B45" d="M0,40 C240,90 480,0 720,45 C960,90 1200,10 1440,50 L1440,100 L0,100 Z"></path>
+  </svg>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+      <!-- Columna 1 -->
+      <div>
+        <p class="font-display text-xl font-bold text-hueso mb-4">Diálogo <span class="text-tierra">&amp;</span> Desarrollo</p>
+        <p class="text-hueso/65 text-sm leading-relaxed">
+          Centro de análisis independiente que produce investigación rigurosa sobre gobernanza, transición energética y sostenibilidad ambiental en el Perú. Creemos que la información contrastada fortalece el debate público.
+        </p>
+      </div>
+
+      <!-- Columna 2 -->
+      <div>
+        <h3 class="text-xs uppercase tracking-[0.2em] font-semibold text-hueso/50 mb-4">Navegación</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#inicio" class="text-hueso/75 hover:text-tierra transition-colors">Inicio</a></li>
+          <li><a href="#publicaciones" class="text-hueso/75 hover:text-tierra transition-colors">Publicaciones</a></li>
+          <li><a href="#podcasts" class="text-hueso/75 hover:text-tierra transition-colors">Podcasts</a></li>
+          <li><a href="#galeria" class="text-hueso/75 hover:text-tierra transition-colors">Galería</a></li>
+          <li><a href="#contacto" class="text-hueso/75 hover:text-tierra transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3 -->
+      <div>
+        <h3 class="text-xs uppercase tracking-[0.2em] font-semibold text-hueso/50 mb-4">Temas</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#publicaciones" class="category-filter-link text-hueso/75 hover:text-tierra transition-colors" data-filter="transición energética">Transición Energética</a></li>
+          <li><a href="#publicaciones" class="category-filter-link text-hueso/75 hover:text-tierra transition-colors" data-filter="reforma agraria">Reforma Agraria</a></li>
+          <li><a href="#publicaciones" class="category-filter-link text-hueso/75 hover:text-tierra transition-colors" data-filter="amazonía">Amazonía</a></li>
+          <li><a href="#publicaciones" class="category-filter-link text-hueso/75 hover:text-tierra transition-colors" data-filter="gobernanza">Gobernanza</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4 -->
+      <div>
+        <h3 class="text-xs uppercase tracking-[0.2em] font-semibold text-hueso/50 mb-4">Contacto</h3>
+        <ul class="space-y-3 text-sm text-hueso/75">
+          <li>Av. Javier Prado Este 1234, San Isidro, Lima</li>
+          <li><a href="mailto:contacto@dialogoydesarrollo.pe" class="hover:text-tierra transition-colors">contacto@dialogoydesarrollo.pe</a></li>
+          <li><a href="tel:+5112345678" class="hover:text-tierra transition-colors">+51 1 234 5678</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4 mt-5" aria-label="Redes sociales">
+          <a href="#" aria-label="Síguenos en X" class="text-hueso/70 hover:text-tierra transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+          </a>
+          <a href="#" aria-label="Síguenos en Facebook" class="text-hueso/70 hover:text-tierra transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" aria-label="Síguenos en Instagram" class="text-hueso/70 hover:text-tierra transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="#" aria-label="Síguenos en LinkedIn" class="text-hueso/70 hover:text-tierra transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="7" y1="10" x2="7" y2="17"></line><circle cx="7" cy="7" r="0.6" fill="currentColor" stroke="none"></circle><path d="M11 17v-4a2 2 0 0 1 4 0v4"></path><line x1="11" y1="10" x2="11" y2="17"></line></svg>
+          </a>
+        </div>
+
+        <form id="newsletter-form" class="mt-6" novalidate>
+          <label for="newsletter-email" class="block text-sm text-hueso/70 mb-2">Suscríbete a nuestro boletín</label>
+          <div class="flex gap-2">
+            <input id="newsletter-email" type="email" required placeholder="tu@correo.com"
+              class="min-w-0 flex-1 bg-white/10 text-hueso placeholder-hueso/40 text-sm rounded-sm px-3 py-2.5 border border-white/20 focus:outline-none focus-visible:outline focus-visible:outline-3">
+            <button type="submit" class="shrink-0 bg-tierra-deep hover:bg-[#7E3419] text-hueso text-sm font-semibold px-4 py-2.5 rounded-sm transition-colors">Enviar</button>
+          </div>
+          <p id="newsletter-message" class="text-xs mt-2 min-h-[1rem]" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-hueso/50">
+      <p>© 2026 Diálogo &amp; Desarrollo. Todos los derechos reservados.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-tierra transition-colors">Política de privacidad</a>
+        <a href="#" class="hover:text-tierra transition-colors">Términos de uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
