@@ -1,0 +1,35 @@
+# PROMPT PARA GENERAR PORTAL INSTITUCIONAL - DIÁLOGO Y DESARROLLO
+
+ROL: Actúa como un desarrollador frontend senior especializado en la construcción de portales institucionales de alto rendimiento, accesibilidad WCAG 2.1 AA y diseño editorial moderno.
+
+CONTEXTO: Estoy construyendo un portal web institucional para una organización sin fines de lucro dedicada al análisis político y ambiental en el Perú. El sitio tiene como objetivo publicar artículos de opinión, episodios de podcast con reproductor interactivo y galerías multimedia. La plataforma debe ser responsive, altamente accesible y reflejar seriedad académica con un toque visual contemporáneo. La audiencia objetivo son profesionales, académicos, periodistas y ciudadanos interesados en el desarrollo sostenible peruano.
+
+REQUISITOS FUNCIONALES:
+1. HEADER: Navbar fijo (sticky) con el logo ("Diálogo & Desarrollo"), menú de navegación con mínimo 5 enlaces (Inicio, Publicaciones, Podcasts, Galería, Contacto), barra de búsqueda visual e interactiva (UI), y menú hamburguesa funcional para dispositivos móviles.
+2. HERO: Sección de impacto con imagen de fondo relacionada con los Andes/Amazonía peruana (usar Unsplash placeholder), título institucional ("Análisis Independiente para el Futuro del Perú"), subtítulo descriptivo ("Investigación, opinión y podcasts sobre sostenibilidad y gobernanza"), y botón CTA funcional que realice scroll suave hacia la sección de publicaciones.
+3. SECCIÓN DE PUBLICACIONES: Grid responsive (1 col en móvil, 2 en tablet, 3 en desktop) con un mínimo de 6 tarjetas de artículos. Cada tarjeta debe incluir: imagen destacada, badge de categoría (ej. Transición Energética, Reforma Agraria, Amazonía, Gobernanza), título claro, extracto breve de 2 líneas, autor peruano ficticio y fecha reciente. Los datos deben ser totalmente realistas sobre la coyuntura peruana.
+4. SECCIÓN MULTIMEDIA (PODCAST & GALERÍA):
+   - Módulo de Podcast: Mínimo 3 episodios con lista y un reproductor visual interactivo (simulado con JavaScript para reproducir/pausar y actualizar el título del episodio activo).
+   - Módulo de Galería: Grid de imágenes con efecto hover que muestre el título del reportaje fotográfico y un efecto lightbox modal al hacer clic en cada imagen.
+5. FOOTER: Estructura de 4 columnas en desktop (1 en móvil): Columna 1 (Logo + misión de la ONG), Columna 2 (Links rápidos de navegación), Columna 3 (Categorías temáticas), Columna 4 (Contacto, redes sociales con iconos SVG e input de suscripción al boletín informativo). Incluir aviso de copyright 2026.
+
+REQUISITOS TÉCNICOS:
+- Stack: HTML5 semántico + CSS3 (Tailwind CSS vía CDN o clases personalizadas) + JavaScript Vanilla (ES6+).
+- Paleta de colores: Verde Selva (#1E4D2B), Azul Institucional (#0D2B45), Tierra Acento (#C85A32), Blanco Hueso (#FAFAFA) y Texto Oscuro (#1F2937).
+- Tipografía: 'Playfair Display' para encabezados (Google Fonts) e 'Inter' para el cuerpo del texto.
+- Responsive design: Mobile-first garantizado. Breakpoints probados en 320px (móvil pequeño), 768px (tablet) y 1200px+ (desktop).
+- Accesibilidad (WCAG 2.1 AA): Contraste de color validado, navegación por teclado con focus visible, etiquetas ARIA en menús y reproductor, y atributo `alt` descriptivo en todas las imágenes.
+- SEO Básico: Meta tags de descripción, Open Graph (og:title, og:image, og:description), lang="es" y etiquetas de encabezado con jerarquía lógica (H1, H2, H3).
+
+RESTRICCIONES:
+- NO utilices frameworks o librerías externas de JavaScript (sin React, sin jQuery, sin Swiper.js). Todo el comportamiento interactivo debe ser JS Vanilla.
+- Toda la interactividad debe funcionar sin errores en la consola del navegador.
+- Incluye comentarios explicativos en español en los bloques clave de HTML, CSS y JS.
+
+FORMATO DE SALIDA:
+Entrega el código dividido exactamente en 3 archivos independientes y limpios:
+1. `index.html`: Estructura semántica completa vinculada a `styles.css` y `script.js`.
+2. `styles.css`: Estilos personalizados, paleta de colores, fuentes de Google Fonts y reglas responsive adicionales.
+3. `script.js`: Lógica interactiva para el menú hamburguesa, el reproductor de podcast y el lightbox de la galería.
+
+Al final de los archivos de código, añade una explicación breve (3 a 4 viñetas) resumiendo la arquitectura y las decisiones clave tomadas en cada archivo.
